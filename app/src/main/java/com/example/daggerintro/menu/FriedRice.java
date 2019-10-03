@@ -8,8 +8,8 @@ public class FriedRice {
 
     public FriedRice(int TYPE){
         switch (TYPE){
-            case VEG_FRIED_RICE: out = "VEG FRIED RICE @ plate";
-            case CHICKEN_FRIED_RICE: out = "CHICKEN FRIED RICE @ plate";
+            case VEG_FRIED_RICE: out = "VEG FRIED RICE @ plate"; break;
+            case CHICKEN_FRIED_RICE: out = "CHICKEN FRIED RICE @ plate"; break;
         }
     }
 

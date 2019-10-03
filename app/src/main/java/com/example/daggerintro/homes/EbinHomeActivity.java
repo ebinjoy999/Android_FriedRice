@@ -11,13 +11,23 @@ import com.example.daggerintro.DaggerSwiggyBoyComponent;
 import com.example.daggerintro.R;
 import com.example.daggerintro.SwiggyBoyComponent;
 import com.example.daggerintro.menu.FriedRice;
+import com.example.daggerintro.qualifier.CheckinFriedRice;
+import com.example.daggerintro.scope.SwiggyScope;
 
 import javax.inject.Inject;
 
 public class EbinHomeActivity extends AppCompatActivity {
 
+
     @Inject
+    @SwiggyScope
+    @CheckinFriedRice
     FriedRice friedRice;
+
+//    @Inject
+//    @SwiggyScope
+//    @CheckinFriedRice
+//    FriedRice friedRice1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
