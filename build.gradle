@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven {
+            url "https://maven.google.com"
+        }
+        
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:3.5.0"
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+    }
+}
+
+ext{
+    daggerVersion = '2.24'
+    daggerDependency = [
+            dagger : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroid : "com.google.dagger:dagger-android:${daggerVersion}",
+            daggerSupport : "com.google.dagger:dagger-android-support:${daggerVersion}", // if you use the support libraries
+            daggerAnnotation : "com.google.dagger:dagger-android-processor:${daggerVersion}"
+            ]
+
+     android = [
+                    minSdkVersion : '15',
+                    targetSdkVersion : '29',
+                    compileSdkVersion : '29',
+                    buildToolsVersion : '29.0.2'
+            ]
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
