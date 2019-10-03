@@ -1,11 +1,11 @@
 package com.example.daggerintro;
 
 import com.example.daggerintro.homes.EbinHomeActivity;
-import com.example.daggerintro.hotel.DModule;
+import com.example.daggerintro.hotel.DhabaModule;
 
 import dagger.Component;
 
-@Component(modules = DModule.class)
-public interface SComponent {
+@Component(modules = DhabaModule.class)
+public interface SwiggyBoyComponent {
     void inject(EbinHomeActivity target );
 }

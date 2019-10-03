@@ -6,7 +6,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class DModule {
+public class DhabaModule {
 
   @Provides
   FriedRice getVegFriedRice(){
